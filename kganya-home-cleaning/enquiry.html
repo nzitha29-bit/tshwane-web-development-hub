@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+<title>Get a Quote | Kganya Home Cleaning Services</title>
+<meta name="description" content="Request a free cleaning quote or book a session with Kganya Home Cleaning Services.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo">Kganya Home Cleaning</a>
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="enquiry.html" aria-current="page">Get a Quote</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <h1>Request a free quote</h1>
+      <p>Fill in the form below and our team will respond within one business day.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="form-heading">
+    <div class="container">
+      <h2 id="form-heading">Tell us about your space</h2>
+      <!-- Form submission logic (validation, backend handling) to be added in Part 3 -->
+      <form action="#" method="post">
+        <div>
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+          <label for="phone">Phone number</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div>
+          <label for="service-type">Service required</label>
+          <select id="service-type" name="service-type">
+            <option value="standard">Standard Clean</option>
+            <option value="deep">Deep Clean</option>
+            <option value="move">Move-in / Move-out Clean</option>
+            <option value="commercial">Commercial Cleaning</option>
+          </select>
+        </div>
+        <div>
+          <label for="property-type">Property type</label>
+          <select id="property-type" name="property-type">
+            <option value="apartment">Apartment</option>
+            <option value="house">House</option>
+            <option value="office">Office / Commercial</option>
+          </select>
+        </div>
+        <div>
+          <label for="date">Preferred date</label>
+          <input type="date" id="date" name="date">
+        </div>
+        <div>
+          <label for="message">Additional details</label>
+          <textarea id="message" name="message" rows="5" placeholder="Number of rooms, address area, special requests..."></textarea>
+        </div>
+        <button type="submit" class="btn" style="background:var(--teal);color:var(--white);border:none;cursor:pointer;">Submit enquiry</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 Kganya Home Cleaning Services, Pretoria, South Africa.</p>
+    <p>Chat to us on <a href="#">WhatsApp Business</a> or visit our <a href="contact.html">Contact page</a>.</p>
+  </div>
+</footer>
+
+</body>
+</html>

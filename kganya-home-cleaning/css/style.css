@@ -1,0 +1,191 @@
+/* Kganya Home Cleaning Services — Part 1 base styles
+   Full visual refinement scheduled for Part 2. This stylesheet
+   only establishes structure, spacing and brand colour so the
+   HTML skeleton is legible while it is being built out. */
+
+:root {
+  --teal: #009B8D;
+  --teal-dark: #00786D;
+  --white: #FFFFFF;
+  --grey: #F5F5F5;
+  --ink: #24302E;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', Arial, sans-serif;
+  color: var(--ink);
+  background: var(--white);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-top: 0;
+}
+
+a { color: var(--teal-dark); }
+
+img { max-width: 100%; display: block; }
+
+.container {
+  width: min(1100px, 92%);
+  margin-inline: auto;
+}
+
+/* Header / nav */
+.site-header {
+  background: var(--white);
+  border-bottom: 1px solid var(--grey);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1rem;
+}
+
+.logo {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--teal-dark);
+  text-decoration: none;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.75rem;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.main-nav a[aria-current="page"],
+.main-nav a:hover {
+  color: var(--teal-dark);
+}
+
+/* Hero */
+.hero {
+  background: var(--teal);
+  color: var(--white);
+  padding: 4rem 0;
+}
+
+.hero h1 {
+  font-size: clamp(1.9rem, 4vw, 2.75rem);
+  max-width: 20ch;
+}
+
+.hero p {
+  max-width: 55ch;
+  font-size: 1.1rem;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--white);
+  color: var(--teal-dark);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.btn:hover { background: var(--grey); }
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--white);
+  color: var(--white);
+}
+
+/* Sections */
+section {
+  padding: 3.5rem 0;
+}
+
+section.alt {
+  background: var(--grey);
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--grey);
+  border-radius: 6px;
+  padding: 1.5rem;
+}
+
+.placeholder-img {
+  background: repeating-linear-gradient(45deg, var(--grey), var(--grey) 10px, #ececec 10px, #ececec 20px);
+  border: 1px dashed #bbb;
+  color: #777;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+}
+
+/* Forms */
+form {
+  display: grid;
+  gap: 1rem;
+  max-width: 560px;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.65rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--ink);
+  color: var(--grey);
+  padding: 2rem 0;
+  font-size: 0.9rem;
+}
+
+.site-footer a { color: var(--white); }
+
+@media (max-width: 700px) {
+  .site-header .container { flex-direction: column; gap: 0.75rem; }
+  .main-nav ul { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+  .grid-3, .grid-2 { grid-template-columns: 1fr; }
+}

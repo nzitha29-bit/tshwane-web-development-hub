@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get Involved | Tshwane Youth Tech Hub</title>
+<meta name="description" content="Volunteer, sponsor or enrol in a programme with Tshwane Youth Tech Hub.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link name="stylesheet" rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo">Tshwane Youth Tech Hub</a>
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Programmes</a></li>
+        <li><a href="enquiry.html" aria-current="page">Get Involved</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <h1>Get involved</h1>
+      <p>Whether you want to volunteer, sponsor a programme, or enrol as a learner, tell us more below.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="form-heading">
+    <div class="container">
+      <h2 id="form-heading">Volunteer &amp; sponsor enquiry</h2>
+      <!-- Form submission logic (validation, backend handling) to be added in Part 3 -->
+      <form action="#" method="post">
+        <div>
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+          <label for="role">I am a...</label>
+          <select id="role" name="role">
+            <option value="volunteer">Volunteer instructor</option>
+            <option value="sponsor">Corporate sponsor / donor</option>
+            <option value="learner">Prospective learner</option>
+            <option value="partner">NGO / government partner</option>
+          </select>
+        </div>
+        <div>
+          <label for="programme">Programme of interest</label>
+          <select id="programme" name="programme">
+            <option value="web-dev">Intro to Web Development</option>
+            <option value="python">Intro to Python</option>
+            <option value="digital-literacy">Digital Literacy Workshop</option>
+            <option value="career">Career Readiness</option>
+            <option value="general">General enquiry</option>
+          </select>
+        </div>
+        <div>
+          <label for="message">Tell us more</label>
+          <textarea id="message" name="message" rows="5" placeholder="Availability, sponsorship interest, or which community you're based in..."></textarea>
+        </div>
+        <button type="submit" class="btn" style="border:none;cursor:pointer;">Submit enquiry</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 Tshwane Youth Tech Hub, Tshwane, South Africa.</p>
+    <p>Find us on <a href="#">Facebook</a> or visit our <a href="contact.html">Contact page</a>.</p>
+  </div>
+</footer>
+
+</body>
+</html>

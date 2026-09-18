@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Tshwane Youth Tech Hub</title>
+<meta name="description" content="Contact Tshwane Youth Tech Hub. Find our Soshanguve and Atteridgeville venues.">
+<link name="stylesheet" rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo">Tshwane Youth Tech Hub</a>
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Programmes</a></li>
+        <li><a href="enquiry.html">Get Involved</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <h1>Get in touch</h1>
+      <p>We run programmes at venues in Soshanguve and Atteridgeville. Reach out with any questions.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="details-heading">
+    <div class="container grid grid-2">
+      <div>
+        <h2 id="details-heading">Contact details</h2>
+        <p><strong>Phone:</strong> 012 987 6543</p>
+        <p><strong>Email:</strong> info@tshwaneyouthtechhub.org.za</p>
+        <p><strong>Facebook:</strong> facebook.com/TshwaneYouthTechHub</p>
+        <p><strong>Venues:</strong> Soshanguve, Atteridgeville</p>
+
+        <h3>Our venues</h3>
+        <div style="border-radius:10px;overflow:hidden;border:1px solid var(--grey);">
+          <iframe
+            title="Tshwane Youth Tech Hub venue map"
+            src="https://maps.google.com/maps?q=Soshanguve%2C%20Tshwane&t=&z=11&ie=UTF8&iwloc=&output=embed"
+            width="100%" height="280" style="border:0;" loading="lazy"></iframe>
+        </div>
+      </div>
+
+      <div>
+        <h2>Send us a message</h2>
+        <!-- Form submission logic to be added in Part 3 -->
+        <form action="#" method="post">
+          <div>
+            <label for="c-name">Full name</label>
+            <input type="text" id="c-name" name="name" required>
+          </div>
+          <div>
+            <label for="c-email">Email address</label>
+            <input type="email" id="c-email" name="email" required>
+          </div>
+          <div>
+            <label for="c-message">Message</label>
+            <textarea id="c-message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn" style="border:none;cursor:pointer;">Send message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 Tshwane Youth Tech Hub, Tshwane, South Africa.</p>
+    <p>Find us on <a href="#">Facebook</a> or visit our <a href="contact.html">Contact page</a>.</p>
+  </div>
+</footer>
+
+</body>
+</html>
