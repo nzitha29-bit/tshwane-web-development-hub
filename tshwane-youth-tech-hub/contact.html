@@ -1,21 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us | Tshwane Youth Tech Hub</title>
-<meta name="description" content="Contact Tshwane Youth Tech Hub. Find our Soshanguve and Atteridgeville venues.">
-<link name="stylesheet" rel="stylesheet" href="css/style.css">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org https://unpkg.com; connect-src 'self'; form-action 'self' mailto:; base-uri 'self'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Contact Us: Venues in Soshanguve, Atteridgeville &amp; Mamelodi | TYTH</title>
+<meta name="description" content="Contact Tshwane Youth Tech Hub by phone, email or online form, and find our programme venues in Soshanguve, Atteridgeville and Mamelodi on the map.">
+<meta name="keywords" content="free coding bootcamp Tshwane, digital skills training Soshanguve, learn to code Atteridgeville, youth tech programmes Pretoria, digital literacy Mamelodi, volunteer coding tutor Pretoria">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://tshwane-youth-tech-hub.netlify.app/contact.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tshwane Youth Tech Hub">
+<meta property="og:title" content="Contact Us: Venues in Soshanguve, Atteridgeville &amp; Mamelodi | TYTH">
+<meta property="og:description" content="Contact Tshwane Youth Tech Hub by phone, email or online form, and find our programme venues in Soshanguve, Atteridgeville and Mamelodi on the map.">
+<meta property="og:url" content="https://tshwane-youth-tech-hub.netlify.app/contact.html">
+<meta property="og:image" content="https://tshwane-youth-tech-hub.netlify.app/images/youth-learners-collaborating-on-laptops.jpg">
+<meta property="og:locale" content="en_ZA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4A148C">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<script src="js/main.js" defer></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+<script src="js/data.js" defer></script>
+<script src="js/map.js" defer></script>
+<script src="js/validate.js" defer></script>
+<script src="js/contact.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  "name": "Tshwane Youth Tech Hub",
+  "url": "https://tshwane-youth-tech-hub.netlify.app/",
+  "logo": "https://tshwane-youth-tech-hub.netlify.app/images/favicon.svg",
+  "image": "https://tshwane-youth-tech-hub.netlify.app/images/youth-learners-collaborating-on-laptops.jpg",
+  "description": "Free coding bootcamps, digital literacy workshops and career readiness programmes for youth aged 16 to 25 in Tshwane.",
+  "foundingDate": "2021",
+  "email": "info@tshwaneyouthtechhub.org.za",
+  "telephone": "+27-12-987-6543",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Tshwane",
+    "addressRegion": "Gauteng",
+    "addressCountry": "ZA"
+  },
+  "areaServed": [
+    "Soshanguve",
+    "Atteridgeville",
+    "Mamelodi",
+    "Tshwane"
+  ],
+  "sameAs": [
+    "https://www.facebook.com/TshwaneYouthTechHub"
+  ]
+}
+</script>
+</head><body>
+<a class="skip-link" href="#main">Skip to main content</a>
 
 <header class="site-header">
   <div class="container">
     <a href="index.html" class="logo">Tshwane Youth Tech Hub</a>
-    <nav class="main-nav" aria-label="Primary">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="primary-nav" aria-label="Primary">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
@@ -27,11 +83,11 @@
   </div>
 </header>
 
-<main>
+<main id="main">
   <section class="hero">
     <div class="container">
       <h1>Get in touch</h1>
-      <p>We run programmes at venues in Soshanguve and Atteridgeville. Reach out with any questions.</p>
+      <p>We run programmes at venues in Soshanguve, Atteridgeville and Mamelodi. Reach out with any questions.</p>
     </div>
   </section>
 
@@ -39,38 +95,68 @@
     <div class="container grid grid-2">
       <div>
         <h2 id="details-heading">Contact details</h2>
-        <p><strong>Phone:</strong> 012 987 6543</p>
-        <p><strong>Email:</strong> info@tshwaneyouthtechhub.org.za</p>
-        <p><strong>Facebook:</strong> facebook.com/TshwaneYouthTechHub</p>
-        <p><strong>Venues:</strong> Soshanguve, Atteridgeville</p>
+        <ul class="contact-list">
+          <li><strong>Phone:</strong> <a href="tel:+27129876543">012&nbsp;987&nbsp;6543</a></li>
+          <li><strong>Email:</strong> <a href="mailto:info@tshwaneyouthtechhub.org.za">info@tshwaneyouthtechhub.org.za</a></li>
+          <li><strong>Facebook:</strong> <a href="https://www.facebook.com/TshwaneYouthTechHub" target="_blank" rel="noopener noreferrer">facebook.com/TshwaneYouthTechHub</a></li>
+          <li><strong>Office hours:</strong> Monday to Friday, 08:00 to 16:00</li>
+        </ul>
 
-        <h3>Our venues</h3>
-        <div style="border-radius:10px;overflow:hidden;border:1px solid var(--grey);">
-          <iframe
-            title="Tshwane Youth Tech Hub venue map"
-            src="https://maps.google.com/maps?q=Soshanguve%2C%20Tshwane&t=&z=11&ie=UTF8&iwloc=&output=embed"
-            width="100%" height="280" style="border:0;" loading="lazy"></iframe>
+        <h3 id="venues-heading">Our venues</h3>
+        <div id="map" class="map" role="region" aria-labelledby="venues-heading"></div>
+        <div class="location-buttons" role="group" aria-label="Show a venue on the map">
+          <button type="button" class="btn btn-outline-dark btn-small" data-location="0" aria-pressed="false">Soshanguve</button>
+          <button type="button" class="btn btn-outline-dark btn-small" data-location="1" aria-pressed="false">Atteridgeville</button>
+          <button type="button" class="btn btn-outline-dark btn-small" data-location="2" aria-pressed="false">Mamelodi</button>
         </div>
+        <p class="hint">Soshanguve and Atteridgeville host our bootcamps; Mamelodi hosts workshops and information sessions.</p>
       </div>
 
       <div>
-        <h2>Send us a message</h2>
-        <!-- Form submission logic to be added in Part 3 -->
-        <form action="#" method="post">
-          <div>
-            <label for="c-name">Full name</label>
-            <input type="text" id="c-name" name="name" required>
+        <h2 id="form-heading">Send us a message</h2>
+        <form id="contact-form" class="contact-form" action="mailto:info@tshwaneyouthtechhub.org.za" method="post" enctype="text/plain" aria-describedby="contact-intro">
+          <p id="contact-intro" class="hint">Fields marked <span class="required-mark">*</span> are required. When you press Send, your email app opens with your message ready to send.</p>
+          <div class="form-summary" tabindex="-1" hidden></div>
+          <div class="field">
+            <label for="c-name">Full name <span class="required-mark">*</span></label>
+            <input type="text" id="c-name" name="name" autocomplete="name" required minlength="2" maxlength="60">
           </div>
-          <div>
-            <label for="c-email">Email address</label>
-            <input type="email" id="c-email" name="email" required>
+          <div class="field-row">
+            <div class="field">
+              <label for="c-email">Email address <span class="required-mark">*</span></label>
+              <input type="email" id="c-email" name="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="c-phone">Phone number</label>
+              <input type="tel" id="c-phone" name="phone" autocomplete="tel" placeholder="072 123 4567" pattern="^(\+27|0)[0-9 \-]{9,12}$">
+            </div>
           </div>
-          <div>
-            <label for="c-message">Message</label>
-            <textarea id="c-message" name="message" rows="5" required></textarea>
+          <div class="field">
+            <label for="c-type">Type of message <span class="required-mark">*</span></label>
+            <select id="c-type" name="type" required>
+              <option value="">Choose one</option>
+              <option value="general">General question</option>
+              <option value="programmes">Question about a programme</option>
+              <option value="feedback">Feedback or compliment</option>
+              <option value="complaint">Complaint</option>
+              <option value="media">Media or press</option>
+            </select>
           </div>
-          <button type="submit" class="btn" style="border:none;cursor:pointer;">Send message</button>
+          <div class="field">
+            <label for="c-subject">Subject <span class="required-mark">*</span></label>
+            <input type="text" id="c-subject" name="subject" required minlength="5" maxlength="80">
+          </div>
+          <div class="field">
+            <label for="c-message">Message <span class="required-mark">*</span></label>
+            <textarea id="c-message" name="message" rows="6" required minlength="20" maxlength="1000"></textarea>
+            <p class="char-count" id="c-message-count" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label class="consent-label"><input type="checkbox" id="c-consent" name="consent" value="yes" required> <span>I agree that my details may be used to reply to this message, as described under POPIA. <span class="required-mark">*</span></span></label>
+          </div>
+          <button type="submit" class="btn">Send message</button>
         </form>
+        <div id="contact-result" class="result-panel" tabindex="-1" aria-live="polite" hidden></div>
       </div>
     </div>
   </section>
@@ -78,8 +164,31 @@
 
 <footer class="site-footer">
   <div class="container">
-    <p>&copy; 2026 Tshwane Youth Tech Hub, Tshwane, South Africa.</p>
-    <p>Find us on <a href="#">Facebook</a> or visit our <a href="contact.html">Contact page</a>.</p>
+    <div class="footer-grid">
+      <div>
+        <h2>Tshwane Youth Tech Hub</h2>
+        <p>Free coding bootcamps, digital literacy workshops and career readiness for youth aged 16 to 25 in Soshanguve, Atteridgeville and Mamelodi.</p>
+      </div>
+      <nav aria-label="Footer">
+        <h2>Pages</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Programmes</a></li>
+          <li><a href="enquiry.html">Get Involved</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Get in touch</h2>
+        <ul>
+          <li><a href="tel:+27129876543">012&nbsp;987&nbsp;6543</a></li>
+          <li><a href="mailto:info@tshwaneyouthtechhub.org.za">info@tshwaneyouthtechhub.org.za</a></li>
+          <li><a href="https://www.facebook.com/TshwaneYouthTechHub" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; <span data-year>2026</span> Tshwane Youth Tech Hub, Tshwane, South Africa.</p>
   </div>
 </footer>
 

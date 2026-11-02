@@ -1,21 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/style.css">
-<title>Get a Quote | Kganya Home Cleaning Services</title>
-<meta name="description" content="Request a free cleaning quote or book a session with Kganya Home Cleaning Services.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org https://unpkg.com; connect-src 'self'; form-action 'self' mailto:; base-uri 'self'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Get an Instant Cleaning Quote: Pretoria &amp; Centurion | Kganya</title>
+<meta name="description" content="Get an instant estimate for home or office cleaning in Pretoria East, Centurion and Midrand, and check availability for your preferred date.">
+<meta name="keywords" content="cleaning services Pretoria East, home cleaning Centurion, office cleaning Midrand, deep cleaning Pretoria, move-out cleaning Centurion, cleaning quote Pretoria">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://kganya-home-cleaning.netlify.app/enquiry.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kganya Home Cleaning">
+<meta property="og:title" content="Get an Instant Cleaning Quote: Pretoria &amp; Centurion | Kganya">
+<meta property="og:description" content="Get an instant estimate for home or office cleaning in Pretoria East, Centurion and Midrand, and check availability for your preferred date.">
+<meta property="og:url" content="https://kganya-home-cleaning.netlify.app/enquiry.html">
+<meta property="og:image" content="https://kganya-home-cleaning.netlify.app/images/kitchen-after-deep-clean-pretoria.jpg">
+<meta property="og:locale" content="en_ZA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#00786D">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600;700&display=swap">
 <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+<script src="js/main.js" defer></script>
+<script src="js/data.js" defer></script>
+<script src="js/validate.js" defer></script>
+<script src="js/enquiry.js" defer></script>
+</head><body>
+<a class="skip-link" href="#main">Skip to main content</a>
 
 <header class="site-header">
   <div class="container">
     <a href="index.html" class="logo">Kganya Home Cleaning</a>
-    <nav class="main-nav" aria-label="Primary">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="primary-nav" aria-label="Primary">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
@@ -27,66 +51,202 @@
   </div>
 </header>
 
-<main>
+<main id="main">
   <section class="hero">
     <div class="container">
-      <h1>Request a free quote</h1>
-      <p>Fill in the form below and our team will respond within one business day.</p>
+      <h1>Get an instant quote</h1>
+      <p>Tell us about your space and see your estimated price and availability straight away. We confirm every booking within one business day.</p>
     </div>
   </section>
 
   <section aria-labelledby="form-heading">
-    <div class="container">
-      <h2 id="form-heading">Tell us about your space</h2>
-      <!-- Form submission logic (validation, backend handling) to be added in Part 3 -->
-      <form action="#" method="post">
-        <div>
-          <label for="name">Full name</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div>
-          <label for="email">Email address</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div>
-          <label for="phone">Phone number</label>
-          <input type="tel" id="phone" name="phone" required>
-        </div>
-        <div>
-          <label for="service-type">Service required</label>
-          <select id="service-type" name="service-type">
-            <option value="standard">Standard Clean</option>
-            <option value="deep">Deep Clean</option>
-            <option value="move">Move-in / Move-out Clean</option>
-            <option value="commercial">Commercial Cleaning</option>
-          </select>
-        </div>
-        <div>
-          <label for="property-type">Property type</label>
-          <select id="property-type" name="property-type">
-            <option value="apartment">Apartment</option>
-            <option value="house">House</option>
-            <option value="office">Office / Commercial</option>
-          </select>
-        </div>
-        <div>
-          <label for="date">Preferred date</label>
-          <input type="date" id="date" name="date">
-        </div>
-        <div>
-          <label for="message">Additional details</label>
-          <textarea id="message" name="message" rows="5" placeholder="Number of rooms, address area, special requests..."></textarea>
-        </div>
-        <button type="submit" class="btn" style="background:var(--teal);color:var(--white);border:none;cursor:pointer;">Submit enquiry</button>
-      </form>
+    <div class="container form-layout">
+      <div>
+        <h2 id="form-heading">Tell us about your space</h2>
+        <form id="quote-form" name="quote-request" action="thank-you.html" method="post" data-netlify="true" netlify-honeypot="bot-field" aria-describedby="quote-intro">
+          <p id="quote-intro" class="hint">Fields marked <span class="required-mark">*</span> are required.</p>
+          <div class="form-summary" tabindex="-1" hidden></div>
+          <input type="hidden" name="form-name" value="quote-request">
+          <input type="hidden" name="reference" value="">
+          <input type="hidden" name="estimate" value="">
+          <p class="honeypot"><label>Leave this field empty <input type="text" name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+
+          <fieldset class="form-section">
+            <legend>Your details</legend>
+            <div class="field">
+              <label for="q-name">Full name <span class="required-mark">*</span></label>
+              <input type="text" id="q-name" name="name" autocomplete="name" required minlength="2" maxlength="60">
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="q-email">Email address <span class="required-mark">*</span></label>
+                <input type="email" id="q-email" name="email" autocomplete="email" required>
+              </div>
+              <div class="field">
+                <label for="q-phone">Phone number <span class="required-mark">*</span></label>
+                <input type="tel" id="q-phone" name="phone" autocomplete="tel" placeholder="082 123 4567" required>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>The cleaning you need</legend>
+            <div class="field">
+              <label for="q-service">Service <span class="required-mark">*</span></label>
+              <select id="q-service" name="service" required>
+                <option value="">Choose a service</option>
+                <option value="standard">Standard Clean</option>
+                <option value="deep">Deep Clean</option>
+                <option value="move">Move-in / Move-out Clean</option>
+                <option value="office">Small Office Package</option>
+                <option value="custom">Custom Commercial Contract</option>
+              </select>
+            </div>
+
+            <div id="residential-fields" class="form-section" hidden>
+              <div class="field">
+                <label for="q-property">Property type <span class="required-mark">*</span></label>
+                <select id="q-property" name="property">
+                  <option value="">Choose one</option>
+                  <option value="apartment">Apartment or townhouse</option>
+                  <option value="house">House</option>
+                </select>
+              </div>
+              <div class="field-row">
+                <div class="field">
+                  <label for="q-bedrooms">Bedrooms <span class="required-mark">*</span></label>
+                  <input type="number" id="q-bedrooms" name="bedrooms" min="1" max="10" step="1" value="2" inputmode="numeric">
+                </div>
+                <div class="field">
+                  <label for="q-bathrooms">Bathrooms <span class="required-mark">*</span></label>
+                  <input type="number" id="q-bathrooms" name="bathrooms" min="1" max="6" step="1" value="1" inputmode="numeric">
+                </div>
+              </div>
+              <fieldset class="field">
+                <legend>Add-ons (optional)</legend>
+                <div class="option-list">
+                  <label><input type="checkbox" name="addons" value="oven"> Inside oven (+R150)</label>
+                  <label><input type="checkbox" name="addons" value="fridge"> Inside fridge (+R100)</label>
+                  <label><input type="checkbox" name="addons" value="windows"> Interior windows (+R200)</label>
+                  <label><input type="checkbox" name="addons" value="ironing"> Ironing, 1 hour (+R120)</label>
+                </div>
+              </fieldset>
+            </div>
+
+            <div id="commercial-fields" class="form-section" hidden>
+              <div class="field">
+                <label for="q-size">Floor size (m&sup2;) <span class="required-mark">*</span></label>
+                <input type="number" id="q-size" name="size" min="20" max="5000" step="1" inputmode="numeric" placeholder="e.g. 120">
+                <p class="hint">The Small Office Package covers up to 150&nbsp;m&sup2;.</p>
+              </div>
+            </div>
+
+            <div class="field" id="frequency-field">
+              <label for="q-frequency">How often? <span class="required-mark">*</span></label>
+              <select id="q-frequency" name="frequency">
+                <option value="once-off">Once-off</option>
+              </select>
+              <p class="hint">Regular Standard Cleans get up to 15% off.</p>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>Where and when</legend>
+            <div class="field">
+              <label for="q-area">Area <span class="required-mark">*</span></label>
+              <select id="q-area" name="area" required>
+                <option value="">Choose your area</option>
+                <option value="pretoria-east">Pretoria East</option>
+                <option value="centurion">Centurion</option>
+                <option value="midrand">Midrand</option>
+                <option value="other">Elsewhere in Gauteng (+R150 travel)</option>
+              </select>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="q-date">Preferred date <span class="required-mark">*</span></label>
+                <input type="date" id="q-date" name="date" required>
+                <p class="hint">Monday to Saturday, at least 2 days from today.</p>
+              </div>
+              <div class="field">
+                <label for="q-time">Preferred time</label>
+                <select id="q-time" name="time">
+                  <option value="morning">Morning</option>
+                  <option value="afternoon">Afternoon</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="q-message">Additional details (optional)</label>
+              <textarea id="q-message" name="message" rows="4" maxlength="500" placeholder="Pets, access instructions, special requests..."></textarea>
+              <p class="char-count" id="q-message-count" aria-live="polite"></p>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <label class="consent-label"><input type="checkbox" id="q-consent" name="consent" value="yes" required> <span>I agree that Kganya may use my details to send this quote, as described under POPIA. <span class="required-mark">*</span></span></label>
+          </div>
+          <button type="submit" class="btn">Get my quote</button>
+        </form>
+      </div>
+
+      <aside aria-labelledby="next-heading">
+        <div id="quote-result" class="result-panel" tabindex="-1" aria-live="polite" hidden></div>
+        <h2 id="next-heading">How it works</h2>
+        <p>Your estimate appears as soon as you press <strong>Get my quote</strong>, together with availability for your chosen date. We then call you to confirm the details and send a final quote within one business day.</p>
+        <p>Want to compare packages first? See our <a href="services.html">services and prices</a>.</p>
+<div class="accordion">
+  <div class="accordion-item">
+    <h3><button type="button" class="accordion-trigger" id="enq-q1" aria-expanded="false" aria-controls="enq-a1">Do I need to be home during the clean?</button></h3>
+    <div class="accordion-panel" id="enq-a1" role="region" aria-labelledby="enq-q1" hidden>
+      <p>No. Many clients leave a key or gate remote with a neighbour or in a lockbox. Tell us how we can get in under Additional details.</p>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h3><button type="button" class="accordion-trigger" id="enq-q2" aria-expanded="false" aria-controls="enq-a2">Can I change or cancel my booking?</button></h3>
+    <div class="accordion-panel" id="enq-a2" role="region" aria-labelledby="enq-q2" hidden>
+      <p>Yes, free of charge up to 24 hours before your clean. Call or WhatsApp us to change the date.</p>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h3><button type="button" class="accordion-trigger" id="enq-q3" aria-expanded="false" aria-controls="enq-a3">Do you work on weekends and public holidays?</button></h3>
+    <div class="accordion-panel" id="enq-a3" role="region" aria-labelledby="enq-q3" hidden>
+      <p>We work Monday to Saturday. Saturdays are mornings only, and we are closed on Sundays and public holidays.</p>
+    </div>
+  </div>
+</div>
+      </aside>
     </div>
   </section>
 </main>
 
 <footer class="site-footer">
   <div class="container">
-    <p>&copy; 2026 Kganya Home Cleaning Services, Pretoria, South Africa.</p>
-    <p>Chat to us on <a href="#">WhatsApp Business</a> or visit our <a href="contact.html">Contact page</a>.</p>
+    <div class="footer-grid">
+      <div>
+        <h2>Kganya Home Cleaning</h2>
+        <p>Trusted home and office cleaning across Pretoria East, Centurion and Midrand since 2019.</p>
+      </div>
+      <nav aria-label="Footer">
+        <h2>Pages</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="enquiry.html">Get a Quote</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Get in touch</h2>
+        <ul>
+          <li><a href="tel:+27123456789">012&nbsp;345&nbsp;6789</a></li>
+          <li><a href="https://wa.me/27823456789" target="_blank" rel="noopener noreferrer">WhatsApp 082 345 6789</a></li>
+          <li><a href="mailto:info@kganyacleaning.co.za">info@kganyacleaning.co.za</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; <span data-year>2026</span> Kganya Home Cleaning, Tshwane, South Africa.</p>
   </div>
 </footer>
 

@@ -1,0 +1,9 @@
+# robots.txt: tells search engine crawlers which pages to index
+User-agent: *
+Allow: /
+
+# Form confirmation and error pages have no value in search results
+Disallow: /thank-you.html
+Disallow: /404.html
+
+Sitemap: https://tshwane-youth-tech-hub.netlify.app/sitemap.xml

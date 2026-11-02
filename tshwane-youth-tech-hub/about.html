@@ -1,21 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us | Tshwane Youth Tech Hub</title>
-<meta name="description" content="Learn about Tshwane Youth Tech Hub's history, mission, vision and the team behind our digital skills programmes.">
-<link name="stylesheet" rel="stylesheet" href="css/style.css">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org https://unpkg.com; connect-src 'self'; form-action 'self' mailto:; base-uri 'self'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>About Tshwane Youth Tech Hub: Our Mission and Team</title>
+<meta name="description" content="Learn how Tshwane Youth Tech Hub has trained over 800 young people in coding and digital skills since 2021, and meet the team behind our programmes.">
+<meta name="keywords" content="free coding bootcamp Tshwane, digital skills training Soshanguve, learn to code Atteridgeville, youth tech programmes Pretoria, digital literacy Mamelodi, volunteer coding tutor Pretoria">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://tshwane-youth-tech-hub.netlify.app/about.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tshwane Youth Tech Hub">
+<meta property="og:title" content="About Tshwane Youth Tech Hub: Our Mission and Team">
+<meta property="og:description" content="Learn how Tshwane Youth Tech Hub has trained over 800 young people in coding and digital skills since 2021, and meet the team behind our programmes.">
+<meta property="og:url" content="https://tshwane-youth-tech-hub.netlify.app/about.html">
+<meta property="og:image" content="https://tshwane-youth-tech-hub.netlify.app/images/youth-learners-collaborating-on-laptops.jpg">
+<meta property="og:locale" content="en_ZA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4A148C">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+<script src="js/main.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  "name": "Tshwane Youth Tech Hub",
+  "url": "https://tshwane-youth-tech-hub.netlify.app/",
+  "logo": "https://tshwane-youth-tech-hub.netlify.app/images/favicon.svg",
+  "image": "https://tshwane-youth-tech-hub.netlify.app/images/youth-learners-collaborating-on-laptops.jpg",
+  "description": "Free coding bootcamps, digital literacy workshops and career readiness programmes for youth aged 16 to 25 in Tshwane.",
+  "foundingDate": "2021",
+  "email": "info@tshwaneyouthtechhub.org.za",
+  "telephone": "+27-12-987-6543",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Tshwane",
+    "addressRegion": "Gauteng",
+    "addressCountry": "ZA"
+  },
+  "areaServed": [
+    "Soshanguve",
+    "Atteridgeville",
+    "Mamelodi",
+    "Tshwane"
+  ],
+  "sameAs": [
+    "https://www.facebook.com/TshwaneYouthTechHub"
+  ]
+}
+</script>
+</head><body>
+<a class="skip-link" href="#main">Skip to main content</a>
 
 <header class="site-header">
   <div class="container">
     <a href="index.html" class="logo">Tshwane Youth Tech Hub</a>
-    <nav class="main-nav" aria-label="Primary">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="primary-nav" aria-label="Primary">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html" aria-current="page">About Us</a></li>
@@ -27,7 +77,7 @@
   </div>
 </header>
 
-<main>
+<main id="main">
   <section class="hero">
     <div class="container">
       <h1>About Tshwane Youth Tech Hub</h1>
@@ -38,23 +88,37 @@
   <section aria-labelledby="history-heading">
     <div class="container">
       <h2 id="history-heading">Our history</h2>
-      <p>Tshwane Youth Tech Hub (TYTH) was established in 2021 by a group of IT professionals and educators who recognised the digital skills gap facing youth in the Tshwane metropolitan municipality. We run free coding bootcamps, digital literacy workshops and career readiness programmes for learners aged 16&ndash;25 from under-resourced communities, including Soshanguve, Atteridgeville and Mamelodi.</p>
-      <p>By 2025, TYTH had reached over 800 beneficiaries and partnered with three corporate sponsors. This website is the next step in building the credibility and reach we need to grow that impact further.</p>
+      <div class="section-intro">
+        <p>Tshwane Youth Tech Hub (TYTH) was established in 2021 by a group of IT professionals and educators who recognised the digital skills gap facing youth in the City of Tshwane. We run free <a href="services.html?type=Coding%20bootcamp">coding bootcamps</a>, <a href="services.html?type=Digital%20literacy">digital literacy workshops</a> and <a href="services.html?type=Career%20readiness">career readiness programmes</a> for learners aged 16&ndash;25 from under-resourced communities, including Soshanguve, Atteridgeville and Mamelodi.</p>
+        <p>By 2025, TYTH had reached over 800 beneficiaries and partnered with three corporate sponsors. This website is the next step in building the credibility and reach we need to grow that impact further.</p>
+      </div>
     </div>
   </section>
 
-  <section class="alt" aria-labelledby="mission-heading">
+  <section class="alt" aria-labelledby="purpose-heading">
     <div class="container">
-      <div class="grid grid-2">
-        <div class="card">
-          <h2 id="mission-heading">Our mission</h2>
-          <p>To empower Tshwane youth through accessible technology education, equipping them with the digital skills needed to participate meaningfully in the modern economy.</p>
-        </div>
-        <div class="card">
-          <h2>Our vision</h2>
-          <p>A Tshwane where every young person, regardless of socioeconomic background, has the digital skills to thrive in the fourth industrial revolution.</p>
-        </div>
-      </div>
+      <h2 id="purpose-heading">What drives us</h2>
+<div class="tabs">
+  <div role="tablist" class="tablist" aria-label="Our mission, vision and values">
+    <button type="button" role="tab" class="tab" id="purpose-tab-0" aria-controls="purpose-panel-0" aria-selected="true">Mission</button>
+    <button type="button" role="tab" class="tab" id="purpose-tab-1" aria-controls="purpose-panel-1" aria-selected="false" tabindex="-1">Vision</button>
+    <button type="button" role="tab" class="tab" id="purpose-tab-2" aria-controls="purpose-panel-2" aria-selected="false" tabindex="-1">Values</button>
+  </div>
+  <div role="tabpanel" class="tabpanel" id="purpose-panel-0" aria-labelledby="purpose-tab-0" tabindex="0">
+    <p>To empower Tshwane youth through accessible technology education, equipping them with the digital skills needed to participate meaningfully in the modern economy.</p>
+  </div>
+  <div role="tabpanel" class="tabpanel" id="purpose-panel-1" aria-labelledby="purpose-tab-1" tabindex="0" hidden>
+    <p>A Tshwane where every young person, regardless of socioeconomic background, has the digital skills to thrive in the fourth industrial revolution.</p>
+  </div>
+  <div role="tabpanel" class="tabpanel" id="purpose-panel-2" aria-labelledby="purpose-tab-2" tabindex="0" hidden>
+    <ul class="values-list">
+      <li><strong>Access for all:</strong> our programmes are free, close to home and need no prior experience.</li>
+      <li><strong>Learning by doing:</strong> every session ends with something the learner has built.</li>
+      <li><strong>Community first:</strong> we recruit, teach and hire from the communities we serve.</li>
+      <li><strong>Accountability:</strong> we report our results openly to learners, families and sponsors.</li>
+    </ul>
+  </div>
+</div>
     </div>
   </section>
 
@@ -62,21 +126,24 @@
     <div class="container">
       <h2 id="team-heading">Our team</h2>
       <div class="grid grid-3">
-        <div class="card">
-          <img class="placeholder-img" role="img" aria-label="Photo placeholder of the programme director" style="height: 190px; width: 300px;" src="images/peace.jpeg" alt="Photo placeholder of the programme director"/>
+        <article class="card card-hover reveal">
+          <img class="photo photo-portrait" src="images/programme-director-tshwane-youth-tech-hub.jpg" alt="Portrait of the Tshwane Youth Tech Hub programme director" width="640" height="640" loading="lazy" decoding="async">
           <h3>Programme Director</h3>
           <p>Leads curriculum design and partner relationships.</p>
-        </div>
-        <div class="card">
-          <img class="placeholder-img" role="img" aria-label="Photo placeholder of a volunteer instructor" style="height: 190px; width: 300px;" src="images/tech 1.jpeg" alt="Photo placeholder of a volunteer instructor"/>
+          <button type="button" class="btn btn-outline-dark btn-small" data-modal-target="bio-director">Read more</button>
+        </article>
+        <article class="card card-hover reveal">
+          <img class="photo photo-portrait" src="images/volunteer-instructor-tshwane.jpg" alt="Volunteer instructor standing outdoors in a high-visibility vest" width="640" height="555" loading="lazy" decoding="async">
           <h3>Volunteer Instructors</h3>
           <p>IT professionals who deliver our bootcamps and workshops.</p>
-        </div>
-        <div class="card">
-          <img class="placeholder-img" role="img" aria-label="Photo placeholder of a community liaison officer" src="images/tech.jpeg" alt="Photo placeholder of a community liaison officer"/>
+          <button type="button" class="btn btn-outline-dark btn-small" data-modal-target="bio-instructors">Read more</button>
+        </article>
+        <article class="card card-hover reveal">
+          <img class="photo photo-portrait" src="images/community-liaison-officer-tshwane.jpg" alt="Smiling community liaison officer in a grey blazer" width="612" height="408" loading="lazy" decoding="async">
           <h3>Community Liaison</h3>
           <p>Coordinates recruitment across Soshanguve, Atteridgeville and Mamelodi.</p>
-        </div>
+          <button type="button" class="btn btn-outline-dark btn-small" data-modal-target="bio-liaison">Read more</button>
+        </article>
       </div>
     </div>
   </section>
@@ -84,15 +151,68 @@
   <section class="alt" aria-labelledby="partners-heading">
     <div class="container">
       <h2 id="partners-heading">Our partners &amp; sponsors</h2>
-      <p>TYTH is proud to work with corporate sponsors and community organisations who share our commitment to digital equity. Partner logos will be added here.</p>
+      <p class="section-intro">TYTH is proud to work with three corporate sponsors and community organisations who share our commitment to digital equity. Sponsors fund learner places and laptops; community partners provide our venues.</p>
+      <a href="enquiry.html?role=partner" class="btn">Become a partner</a>
+      <a href="enquiry.html?role=sponsor" class="btn btn-outline-dark">Sponsor a learner</a>
     </div>
   </section>
 </main>
 
+<dialog class="modal" id="bio-director" aria-labelledby="bio-director-title">
+  <div class="modal-header">
+    <h2 id="bio-director-title">Programme Director</h2>
+    <button type="button" class="modal-close" data-close aria-label="Close">&times;</button>
+  </div>
+  <div class="modal-body">
+    <p>Our programme director designs the curriculum for every bootcamp and workshop, making sure learners leave with skills employers ask for. She also manages our relationships with corporate sponsors and reports on the results of each intake.</p><p><strong>Focus areas:</strong> curriculum, sponsor reporting, instructor training.</p>
+  </div>
+</dialog>
+<dialog class="modal" id="bio-instructors" aria-labelledby="bio-instructors-title">
+  <div class="modal-header">
+    <h2 id="bio-instructors-title">Volunteer Instructors</h2>
+    <button type="button" class="modal-close" data-close aria-label="Close">&times;</button>
+  </div>
+  <div class="modal-body">
+    <p>Our instructors are working developers, analysts and IT support staff who give up Saturday mornings to teach. Each instructor completes a short induction on teaching beginners before they lead a class.</p><p><a href="enquiry.html?role=volunteer">Volunteer as an instructor</a></p>
+  </div>
+</dialog>
+<dialog class="modal" id="bio-liaison" aria-labelledby="bio-liaison-title">
+  <div class="modal-header">
+    <h2 id="bio-liaison-title">Community Liaison</h2>
+    <button type="button" class="modal-close" data-close aria-label="Close">&times;</button>
+  </div>
+  <div class="modal-body">
+    <p>Our community liaison officer works with schools, churches and youth clubs in Soshanguve, Atteridgeville and Mamelodi to recruit learners, and helps families with application forms and transport questions.</p><p><strong>Contact:</strong> <a href="contact.html">via our contact page</a>.</p>
+  </div>
+</dialog>
+
 <footer class="site-footer">
   <div class="container">
-    <p>&copy; 2026 Tshwane Youth Tech Hub, Tshwane, South Africa.</p>
-    <p>Find us on <a href="#">Facebook</a> or visit our <a href="contact.html">Contact page</a>.</p>
+    <div class="footer-grid">
+      <div>
+        <h2>Tshwane Youth Tech Hub</h2>
+        <p>Free coding bootcamps, digital literacy workshops and career readiness for youth aged 16 to 25 in Soshanguve, Atteridgeville and Mamelodi.</p>
+      </div>
+      <nav aria-label="Footer">
+        <h2>Pages</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Programmes</a></li>
+          <li><a href="enquiry.html">Get Involved</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Get in touch</h2>
+        <ul>
+          <li><a href="tel:+27129876543">012&nbsp;987&nbsp;6543</a></li>
+          <li><a href="mailto:info@tshwaneyouthtechhub.org.za">info@tshwaneyouthtechhub.org.za</a></li>
+          <li><a href="https://www.facebook.com/TshwaneYouthTechHub" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; <span data-year>2026</span> Tshwane Youth Tech Hub, Tshwane, South Africa.</p>
   </div>
 </footer>
 

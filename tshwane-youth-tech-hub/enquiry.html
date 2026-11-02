@@ -1,21 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Get Involved | Tshwane Youth Tech Hub</title>
-<meta name="description" content="Volunteer, sponsor or enrol in a programme with Tshwane Youth Tech Hub.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org https://unpkg.com; connect-src 'self'; form-action 'self' mailto:; base-uri 'self'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Get Involved: Apply, Volunteer or Sponsor | Tshwane Youth Tech Hub</title>
+<meta name="description" content="Apply for a free coding bootcamp, volunteer as an instructor or sponsor a learner with Tshwane Youth Tech Hub, and see seat availability instantly.">
+<meta name="keywords" content="free coding bootcamp Tshwane, digital skills training Soshanguve, learn to code Atteridgeville, youth tech programmes Pretoria, digital literacy Mamelodi, volunteer coding tutor Pretoria">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://tshwane-youth-tech-hub.netlify.app/enquiry.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tshwane Youth Tech Hub">
+<meta property="og:title" content="Get Involved: Apply, Volunteer or Sponsor | Tshwane Youth Tech Hub">
+<meta property="og:description" content="Apply for a free coding bootcamp, volunteer as an instructor or sponsor a learner with Tshwane Youth Tech Hub, and see seat availability instantly.">
+<meta property="og:url" content="https://tshwane-youth-tech-hub.netlify.app/enquiry.html">
+<meta property="og:image" content="https://tshwane-youth-tech-hub.netlify.app/images/youth-learners-collaborating-on-laptops.jpg">
+<meta property="og:locale" content="en_ZA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4A148C">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link name="stylesheet" rel="stylesheet" href="css/style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+<script src="js/main.js" defer></script>
+<script src="js/data.js" defer></script>
+<script src="js/validate.js" defer></script>
+<script src="js/enquiry.js" defer></script>
+</head><body>
+<a class="skip-link" href="#main">Skip to main content</a>
 
 <header class="site-header">
   <div class="container">
     <a href="index.html" class="logo">Tshwane Youth Tech Hub</a>
-    <nav class="main-nav" aria-label="Primary">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="primary-nav" aria-label="Primary">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
@@ -27,60 +51,227 @@
   </div>
 </header>
 
-<main>
+<main id="main">
   <section class="hero">
     <div class="container">
       <h1>Get involved</h1>
-      <p>Whether you want to volunteer, sponsor a programme, or enrol as a learner, tell us more below.</p>
+      <p>Whether you want to enrol as a learner, volunteer as an instructor, sponsor a programme or partner with us, tell us more below and we will reply straight away with the next steps.</p>
     </div>
   </section>
 
   <section aria-labelledby="form-heading">
-    <div class="container">
-      <h2 id="form-heading">Volunteer &amp; sponsor enquiry</h2>
-      <!-- Form submission logic (validation, backend handling) to be added in Part 3 -->
-      <form action="#" method="post">
-        <div>
-          <label for="name">Full name</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div>
-          <label for="email">Email address</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div>
-          <label for="role">I am a...</label>
-          <select id="role" name="role">
-            <option value="volunteer">Volunteer instructor</option>
-            <option value="sponsor">Corporate sponsor / donor</option>
-            <option value="learner">Prospective learner</option>
-            <option value="partner">NGO / government partner</option>
-          </select>
-        </div>
-        <div>
-          <label for="programme">Programme of interest</label>
-          <select id="programme" name="programme">
-            <option value="web-dev">Intro to Web Development</option>
-            <option value="python">Intro to Python</option>
-            <option value="digital-literacy">Digital Literacy Workshop</option>
-            <option value="career">Career Readiness</option>
-            <option value="general">General enquiry</option>
-          </select>
-        </div>
-        <div>
-          <label for="message">Tell us more</label>
-          <textarea id="message" name="message" rows="5" placeholder="Availability, sponsorship interest, or which community you're based in..."></textarea>
-        </div>
-        <button type="submit" class="btn" style="border:none;cursor:pointer;">Submit enquiry</button>
-      </form>
+    <div class="container form-layout">
+      <div>
+        <h2 id="form-heading">Volunteer, sponsor and learner enquiry</h2>
+        <form id="involve-form" name="get-involved" action="thank-you.html" method="post" data-netlify="true" netlify-honeypot="bot-field" aria-describedby="involve-intro">
+          <p id="involve-intro" class="hint">Fields marked <span class="required-mark">*</span> are required.</p>
+          <div class="form-summary" tabindex="-1" hidden></div>
+          <input type="hidden" name="form-name" value="get-involved">
+          <input type="hidden" name="reference" value="">
+          <input type="hidden" name="summary" value="">
+          <p class="honeypot"><label>Leave this field empty <input type="text" name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+
+          <div class="field">
+            <label for="e-name">Full name <span class="required-mark">*</span></label>
+            <input type="text" id="e-name" name="name" autocomplete="name" required minlength="2" maxlength="60">
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="e-email">Email address <span class="required-mark">*</span></label>
+              <input type="email" id="e-email" name="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="e-phone">Phone number <span class="required-mark">*</span></label>
+              <input type="tel" id="e-phone" name="phone" autocomplete="tel" placeholder="072 123 4567" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="e-role">I would like to&hellip; <span class="required-mark">*</span></label>
+            <select id="e-role" name="role" required>
+              <option value="">Choose one</option>
+              <option value="learner">Enrol as a learner</option>
+              <option value="volunteer">Volunteer as an instructor</option>
+              <option value="sponsor">Sponsor or donate</option>
+              <option value="partner">Partner with you (NGO, school, government)</option>
+            </select>
+          </div>
+
+          <fieldset class="form-section" id="learner-fields" hidden>
+            <legend>About you as a learner</legend>
+            <div class="field-row">
+              <div class="field">
+                <label for="e-dob">Date of birth <span class="required-mark">*</span></label>
+                <input type="date" id="e-dob" name="dob" autocomplete="bday">
+                <p class="hint">Our programmes are for ages 16 to 25.</p>
+              </div>
+              <div class="field">
+                <label for="e-venue">Closest venue <span class="required-mark">*</span></label>
+                <select id="e-venue" name="venue">
+                  <option value="">Choose one</option>
+                  <option value="Soshanguve">Soshanguve</option>
+                  <option value="Atteridgeville">Atteridgeville</option>
+                  <option value="Mamelodi">Mamelodi</option>
+                  <option value="any">Any venue</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="e-programme">Programme <span class="required-mark">*</span></label>
+              <select id="e-programme" name="programme">
+                <option value="">Choose one</option>
+                <option value="web-dev">Intro to Web Development (8 weeks)</option>
+                <option value="python">Intro to Python (6 weeks)</option>
+                <option value="digital-literacy">Digital Literacy Workshop (2 days)</option>
+                <option value="career">Career Readiness</option>
+              </select>
+            </div>
+            <div class="field" id="prerequisite-field" hidden>
+              <label class="consent-label"><input type="checkbox" id="e-prerequisite" name="prerequisite" value="yes"> <span>I have completed the Digital Literacy Workshop</span></label>
+            </div>
+            <div class="field" id="guardian-field" hidden>
+              <label class="consent-label"><input type="checkbox" id="e-guardian" name="guardian" value="yes"> <span>My parent or guardian agrees to me applying. <span class="required-mark">*</span></span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section" id="volunteer-fields" hidden>
+            <legend>About you as a volunteer</legend>
+            <fieldset class="field" id="e-skills">
+              <legend>Skills you can share <span class="required-mark">*</span></legend>
+              <div class="option-list">
+                <label><input type="checkbox" name="skills" value="web"> Web development (HTML, CSS, JavaScript)</label>
+                <label><input type="checkbox" name="skills" value="python"> Python programming</label>
+                <label><input type="checkbox" name="skills" value="computer-basics"> Computer basics and office software</label>
+                <label><input type="checkbox" name="skills" value="careers"> CVs, interviews and career guidance</label>
+              </div>
+            </fieldset>
+            <div class="field-row">
+              <div class="field">
+                <label for="e-availability">When are you available? <span class="required-mark">*</span></label>
+                <select id="e-availability" name="availability">
+                  <option value="">Choose one</option>
+                  <option value="saturdays">Saturday mornings</option>
+                  <option value="weekday-evenings">Weekday evenings</option>
+                  <option value="both">Both</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="e-hours">Hours per month <span class="required-mark">*</span></label>
+                <input type="number" id="e-hours" name="hours" min="2" max="40" step="1" value="8" inputmode="numeric">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section" id="org-fields" hidden>
+            <legend>Your organisation</legend>
+            <div class="field">
+              <label for="e-org">Organisation name <span class="required-mark">*</span></label>
+              <input type="text" id="e-org" name="org" autocomplete="organization" maxlength="100">
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section" id="sponsor-fields" hidden>
+            <legend>Your sponsorship</legend>
+            <div class="field-row">
+              <div class="field">
+                <label for="e-sponsor-type">Type of support <span class="required-mark">*</span></label>
+                <select id="e-sponsor-type" name="sponsor-type">
+                  <option value="">Choose one</option>
+                  <option value="funding">Funding learner places</option>
+                  <option value="laptops">Laptops or equipment</option>
+                  <option value="bursary">Bursaries for graduates</option>
+                  <option value="venue">A venue</option>
+                </select>
+              </div>
+              <div class="field" id="amount-field">
+                <label for="e-amount">Amount you would like to give (R) <span class="required-mark">*</span></label>
+                <input type="number" id="e-amount" name="amount" min="500" max="5000000" step="100" inputmode="numeric" placeholder="e.g. 25000">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section" id="partner-fields" hidden>
+            <legend>Partnership</legend>
+            <div class="field">
+              <label for="e-partner-type">Type of organisation <span class="required-mark">*</span></label>
+              <select id="e-partner-type" name="partner-type">
+                <option value="">Choose one</option>
+                <option value="ngo">NGO or community organisation</option>
+                <option value="school">School or college</option>
+                <option value="government">Government department</option>
+                <option value="company">Company or employer</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <label for="e-message">Tell us more (optional)</label>
+            <textarea id="e-message" name="message" rows="4" maxlength="500" placeholder="Availability, sponsorship interest, or which community you are based in..."></textarea>
+            <p class="char-count" id="e-message-count" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label class="consent-label"><input type="checkbox" id="e-consent" name="consent" value="yes" required> <span>I agree that Tshwane Youth Tech Hub may use my details to respond to this enquiry, as described under POPIA. <span class="required-mark">*</span></span></label>
+          </div>
+          <button type="submit" class="btn">Send enquiry</button>
+        </form>
+      </div>
+
+      <aside aria-labelledby="next-heading">
+        <div id="involve-result" class="result-panel" tabindex="-1" aria-live="polite" hidden></div>
+        <h2 id="next-heading">What happens next</h2>
+        <p>As soon as you send this form we show you your next steps: the next intake with open seats for learners, the classes that need your skills for volunteers, or what your support will fund for sponsors.</p>
+        <p>Prefer to browse first? See all <a href="services.html">upcoming intakes</a>.</p>
+<div class="accordion">
+  <div class="accordion-item">
+    <h3><button type="button" class="accordion-trigger" id="enq-q1" aria-expanded="false" aria-controls="enq-a1">How much does it cost to sponsor a learner?</button></h3>
+    <div class="accordion-panel" id="enq-a1" role="region" aria-labelledby="enq-q1" hidden>
+      <p>R2&nbsp;500 puts one learner through an 8-week coding bootcamp, and R400 covers a place on a 2-day Digital Literacy Workshop. A refurbished laptop for our lab costs about R6&nbsp;500.</p>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h3><button type="button" class="accordion-trigger" id="enq-q2" aria-expanded="false" aria-controls="enq-a2">Do volunteers need teaching experience?</button></h3>
+    <div class="accordion-panel" id="enq-a2" role="region" aria-labelledby="enq-q2" hidden>
+      <p>No. You need solid skills in the topic and patience. Every volunteer attends a two-hour induction on teaching beginners before leading a class.</p>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h3><button type="button" class="accordion-trigger" id="enq-q3" aria-expanded="false" aria-controls="enq-a3">How quickly will you reply?</button></h3>
+    <div class="accordion-panel" id="enq-a3" role="region" aria-labelledby="enq-q3" hidden>
+      <p>Learners and partners hear from us within 5 working days, and sponsors receive a proposal within 3 working days.</p>
+    </div>
+  </div>
+</div>
+      </aside>
     </div>
   </section>
 </main>
 
 <footer class="site-footer">
   <div class="container">
-    <p>&copy; 2026 Tshwane Youth Tech Hub, Tshwane, South Africa.</p>
-    <p>Find us on <a href="#">Facebook</a> or visit our <a href="contact.html">Contact page</a>.</p>
+    <div class="footer-grid">
+      <div>
+        <h2>Tshwane Youth Tech Hub</h2>
+        <p>Free coding bootcamps, digital literacy workshops and career readiness for youth aged 16 to 25 in Soshanguve, Atteridgeville and Mamelodi.</p>
+      </div>
+      <nav aria-label="Footer">
+        <h2>Pages</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Programmes</a></li>
+          <li><a href="enquiry.html">Get Involved</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Get in touch</h2>
+        <ul>
+          <li><a href="tel:+27129876543">012&nbsp;987&nbsp;6543</a></li>
+          <li><a href="mailto:info@tshwaneyouthtechhub.org.za">info@tshwaneyouthtechhub.org.za</a></li>
+          <li><a href="https://www.facebook.com/TshwaneYouthTechHub" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; <span data-year>2026</span> Tshwane Youth Tech Hub, Tshwane, South Africa.</p>
   </div>
 </footer>
 

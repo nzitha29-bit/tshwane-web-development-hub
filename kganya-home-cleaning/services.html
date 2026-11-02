@@ -1,21 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/style.css">
-<title>Services &amp; Pricing | Kganya Home Cleaning Services</title>
-<meta name="description" content="Residential and commercial cleaning packages from Kganya Home Cleaning Services, Pretoria.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org https://unpkg.com; connect-src 'self'; form-action 'self' mailto:; base-uri 'self'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Cleaning Services &amp; Prices: Pretoria, Centurion, Midrand | Kganya</title>
+<meta name="description" content="Compare home and office cleaning packages and add-ons with prices: Standard Clean from R450, Deep Clean from R850, office cleaning from R1 500 a month.">
+<meta name="keywords" content="cleaning services Pretoria East, home cleaning Centurion, office cleaning Midrand, deep cleaning Pretoria, move-out cleaning Centurion, cleaning quote Pretoria">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://kganya-home-cleaning.netlify.app/services.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kganya Home Cleaning">
+<meta property="og:title" content="Cleaning Services &amp; Prices: Pretoria, Centurion, Midrand | Kganya">
+<meta property="og:description" content="Compare home and office cleaning packages and add-ons with prices: Standard Clean from R450, Deep Clean from R850, office cleaning from R1 500 a month.">
+<meta property="og:url" content="https://kganya-home-cleaning.netlify.app/services.html">
+<meta property="og:image" content="https://kganya-home-cleaning.netlify.app/images/kitchen-after-deep-clean-pretoria.jpg">
+<meta property="og:locale" content="en_ZA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#00786D">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600;700&display=swap">
 <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+<script src="js/main.js" defer></script>
+<script src="js/data.js" defer></script>
+<script src="js/catalogue.js" defer></script>
+</head><body>
+<a class="skip-link" href="#main">Skip to main content</a>
 
 <header class="site-header">
   <div class="container">
     <a href="index.html" class="logo">Kganya Home Cleaning</a>
-    <nav class="main-nav" aria-label="Primary">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="primary-nav" aria-label="Primary">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
@@ -27,67 +50,145 @@
   </div>
 </header>
 
-<main>
+<main id="main">
   <section class="hero">
     <div class="container">
-      <h1>Services &amp; pricing tiers</h1>
+      <h1>Cleaning services &amp; prices</h1>
       <p>Choose the cleaning package that suits your home or business. All packages include supplies and equipment.</p>
     </div>
   </section>
 
-  <section aria-labelledby="residential-heading">
+  <section aria-labelledby="catalogue-heading">
     <div class="container">
-      <h2 id="residential-heading">Residential cleaning</h2>
-      <div class="grid grid-3">
-        <div class="card">
-          <h3>Standard Clean</h3>
-          <p>Dusting, vacuuming, mopping, kitchen and bathroom sanitising.</p>
-          <p><strong>From R450 per visit</strong></p>
+      <h2 id="catalogue-heading">Find the right service</h2>
+      <p class="section-intro">Search our packages and add-ons, filter by type or budget, and sort by price.</p>
+
+      <form id="catalogue-form" class="toolbar" role="search" aria-label="Search services">
+        <div class="search-field">
+          <label for="search">Search</label>
+          <input type="search" id="search" name="q" placeholder="e.g. oven, office, move" autocomplete="off">
         </div>
-        <div class="card">
-          <h3>Deep Clean</h3>
-          <p>Standard clean plus inside cupboards, appliances and skirtings.</p>
-          <p><strong>From R850 per visit</strong></p>
+        <div>
+          <label for="filter-category">Type</label>
+          <select id="filter-category" name="category">
+            <option value="all">All services</option>
+            <option value="Residential">Residential</option>
+            <option value="Commercial">Commercial</option>
+            <option value="Add-on">Add-ons</option>
+          </select>
         </div>
-        <div class="card">
-          <h3>Move-in / Move-out</h3>
-          <p>Full property clean before or after a move, including windows.</p>
-          <p><strong>From R1 200 per visit</strong></p>
+        <div>
+          <label for="filter-budget">Budget</label>
+          <select id="filter-budget" name="budget">
+            <option value="any">Any price</option>
+            <option value="200">Up to R200</option>
+            <option value="500">Up to R500</option>
+            <option value="1000">Up to R1&nbsp;000</option>
+            <option value="1500">Up to R1&nbsp;500</option>
+          </select>
         </div>
-      </div>
+        <div>
+          <label for="sort">Sort by</label>
+          <select id="sort" name="sort">
+            <option value="featured">Featured</option>
+            <option value="price-asc">Price: low to high</option>
+            <option value="price-desc">Price: high to low</option>
+            <option value="name">Name (A to Z)</option>
+          </select>
+        </div>
+        <button type="submit" class="visually-hidden">Apply search and filters</button>
+      </form>
+
+      <p id="results-status" class="results-status" aria-live="polite"></p>
+      <ul id="catalogue" class="catalogue grid grid-3">
+        <li><p>Loading services&hellip;</p></li>
+      </ul>
+      <noscript><p>Turn on JavaScript to see our full price list, or <a href="contact.html">contact us</a> for prices.</p></noscript>
     </div>
   </section>
 
-  <section class="alt" aria-labelledby="commercial-heading">
+  <section class="alt" aria-labelledby="faq-heading">
     <div class="container">
-      <h2 id="commercial-heading">Commercial cleaning</h2>
-      <div class="grid grid-2">
-        <div class="card">
-          <h3>Small Office Package</h3>
-          <p>Weekly or bi-weekly servicing for offices up to 150m&sup2;.</p>
-          <p><strong>From R1 500 per month</strong></p>
-        </div>
-        <div class="card">
-          <h3>Custom Commercial Contract</h3>
-          <p>Tailored scope and frequency for larger premises, shops or estates. Contact us for a site visit and quote.</p>
-        </div>
-      </div>
+      <h2 id="faq-heading">How our pricing works</h2>
+<div class="accordion">
+  <div class="accordion-item">
+    <h3><button type="button" class="accordion-trigger" id="faq-q1" aria-expanded="false" aria-controls="faq-a1">What is included in the price?</button></h3>
+    <div class="accordion-panel" id="faq-a1" role="region" aria-labelledby="faq-q1" hidden>
+      <p>All cleaning products, cloths, mops and vacuum cleaners are included. You do not need to supply anything.</p>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h3><button type="button" class="accordion-trigger" id="faq-q2" aria-expanded="false" aria-controls="faq-a2">Why does the price depend on bedrooms and bathrooms?</button></h3>
+    <div class="accordion-panel" id="faq-a2" role="region" aria-labelledby="faq-q2" hidden>
+      <p>Our prices are for homes with up to 2 bedrooms and 1 bathroom. Each extra bedroom or bathroom adds time on site, so it adds a fixed amount to the visit price. Our <a href="enquiry.html">quote form</a> works this out for you.</p>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h3><button type="button" class="accordion-trigger" id="faq-q3" aria-expanded="false" aria-controls="faq-a3">Do you offer discounts for regular cleans?</button></h3>
+    <div class="accordion-panel" id="faq-a3" role="region" aria-labelledby="faq-q3" hidden>
+      <p>Yes. A Standard Clean booked weekly gets 15% off, every second week gets 10% off and monthly gets 5% off.</p>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h3><button type="button" class="accordion-trigger" id="faq-q4" aria-expanded="false" aria-controls="faq-a4">Do you clean outside Pretoria East, Centurion and Midrand?</button></h3>
+    <div class="accordion-panel" id="faq-a4" role="region" aria-labelledby="faq-q4" hidden>
+      <p>We can clean elsewhere in Gauteng for an extra travel fee of R150 per visit.</p>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h3><button type="button" class="accordion-trigger" id="faq-q5" aria-expanded="false" aria-controls="faq-a5">Are your cleaners vetted and insured?</button></h3>
+    <div class="accordion-panel" id="faq-a5" role="region" aria-labelledby="faq-q5" hidden>
+      <p>Yes. All twelve of our cleaners are permanent staff who have passed background checks, and our work is covered by public liability insurance.</p>
+    </div>
+  </div>
+</div>
     </div>
   </section>
 
   <section aria-labelledby="cta-heading">
     <div class="container">
       <h2 id="cta-heading">Not sure which package fits?</h2>
-      <p>Send us your details and we'll recommend the right option.</p>
-      <a href="enquiry.html" class="btn" style="background:var(--teal);color:var(--white);">Request a quote</a>
+      <p>Answer a few questions and we will recommend the right option with an instant estimate.</p>
+      <a href="enquiry.html" class="btn">Get an instant quote</a>
     </div>
   </section>
 </main>
 
+<dialog class="modal" id="detail-modal" aria-labelledby="detail-title">
+  <div class="modal-header">
+    <h2 id="detail-title">Details</h2>
+    <button type="button" class="modal-close" data-close aria-label="Close">&times;</button>
+  </div>
+  <div class="modal-body"></div>
+</dialog>
+
 <footer class="site-footer">
   <div class="container">
-    <p>&copy; 2026 Kganya Home Cleaning Services, Pretoria, South Africa.</p>
-    <p>Chat to us on <a href="#">WhatsApp Business</a> or visit our <a href="contact.html">Contact page</a>.</p>
+    <div class="footer-grid">
+      <div>
+        <h2>Kganya Home Cleaning</h2>
+        <p>Trusted home and office cleaning across Pretoria East, Centurion and Midrand since 2019.</p>
+      </div>
+      <nav aria-label="Footer">
+        <h2>Pages</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="enquiry.html">Get a Quote</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Get in touch</h2>
+        <ul>
+          <li><a href="tel:+27123456789">012&nbsp;345&nbsp;6789</a></li>
+          <li><a href="https://wa.me/27823456789" target="_blank" rel="noopener noreferrer">WhatsApp 082 345 6789</a></li>
+          <li><a href="mailto:info@kganyacleaning.co.za">info@kganyacleaning.co.za</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; <span data-year>2026</span> Kganya Home Cleaning, Tshwane, South Africa.</p>
   </div>
 </footer>
 
