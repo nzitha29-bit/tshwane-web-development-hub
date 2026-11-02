@@ -1,21 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tshwane Youth Tech Hub | Free Digital Skills for Tshwane Youth</title>
-<meta name="description" content="Tshwane Youth Tech Hub runs free coding bootcamps and digital literacy workshops for youth aged 16-25 in Soshanguve, Atteridgeville and Mamelodi.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org https://unpkg.com; connect-src 'self'; form-action 'self' mailto:; base-uri 'self'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Free Coding Bootcamps for Tshwane Youth | Tshwane Youth Tech Hub</title>
+<meta name="description" content="Free coding bootcamps, digital literacy workshops and career readiness for youth aged 16 to 25 in Soshanguve, Atteridgeville and Mamelodi, Tshwane.">
+<meta name="keywords" content="free coding bootcamp Tshwane, digital skills training Soshanguve, learn to code Atteridgeville, youth tech programmes Pretoria, digital literacy Mamelodi, volunteer coding tutor Pretoria">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://tshwane-youth-tech-hub.netlify.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tshwane Youth Tech Hub">
+<meta property="og:title" content="Free Coding Bootcamps for Tshwane Youth | Tshwane Youth Tech Hub">
+<meta property="og:description" content="Free coding bootcamps, digital literacy workshops and career readiness for youth aged 16 to 25 in Soshanguve, Atteridgeville and Mamelodi, Tshwane.">
+<meta property="og:url" content="https://tshwane-youth-tech-hub.netlify.app/">
+<meta property="og:image" content="https://tshwane-youth-tech-hub.netlify.app/images/youth-learners-collaborating-on-laptops.jpg">
+<meta property="og:locale" content="en_ZA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4A148C">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link name="stylesheet" rel="stylesheet" href="css/style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+<script src="js/main.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  "name": "Tshwane Youth Tech Hub",
+  "url": "https://tshwane-youth-tech-hub.netlify.app/",
+  "logo": "https://tshwane-youth-tech-hub.netlify.app/images/favicon.svg",
+  "image": "https://tshwane-youth-tech-hub.netlify.app/images/youth-learners-collaborating-on-laptops.jpg",
+  "description": "Free coding bootcamps, digital literacy workshops and career readiness programmes for youth aged 16 to 25 in Tshwane.",
+  "foundingDate": "2021",
+  "email": "info@tshwaneyouthtechhub.org.za",
+  "telephone": "+27-12-987-6543",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Tshwane",
+    "addressRegion": "Gauteng",
+    "addressCountry": "ZA"
+  },
+  "areaServed": [
+    "Soshanguve",
+    "Atteridgeville",
+    "Mamelodi",
+    "Tshwane"
+  ],
+  "sameAs": [
+    "https://www.facebook.com/TshwaneYouthTechHub"
+  ]
+}
+</script>
+</head><body>
+<a class="skip-link" href="#main">Skip to main content</a>
 
 <header class="site-header">
   <div class="container">
     <a href="index.html" class="logo">Tshwane Youth Tech Hub</a>
-    <nav class="main-nav" aria-label="Primary">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="primary-nav" aria-label="Primary">
       <ul>
         <li><a href="index.html" aria-current="page">Home</a></li>
         <li><a href="about.html">About Us</a></li>
@@ -27,13 +77,16 @@
   </div>
 </header>
 
-<main>
+<main id="main">
   <section class="hero">
     <div class="container">
-      <h1>Free digital skills training for Tshwane youth</h1>
+      <h1>Free coding bootcamps and digital skills training for Tshwane youth</h1>
       <p>Coding bootcamps, digital literacy workshops and career readiness programmes for learners aged 16&ndash;25 in Soshanguve, Atteridgeville and Mamelodi.</p>
-      <a href="enquiry.html" class="btn">Volunteer</a>
-      <a href="enquiry.html" class="btn btn-outline">Donate</a>
+      <p>
+        <a href="services.html" class="btn">See upcoming intakes</a>
+        <a href="enquiry.html?role=volunteer" class="btn btn-outline">Volunteer</a>
+        <a href="enquiry.html?role=sponsor" class="btn btn-outline">Sponsor a learner</a>
+      </p>
     </div>
   </section>
 
@@ -41,20 +94,20 @@
     <div class="container">
       <h2 id="impact-heading">Our impact so far</h2>
       <div class="grid grid-4">
-        <div>
-          <p class="impact-number">800+</p>
-          <p>Beneficiaries reached since 2021</p>
+        <div class="reveal">
+          <p class="impact-number" data-count="800" data-suffix="+">800+</p>
+          <p>Young people trained since 2021</p>
         </div>
-        <div>
-          <p class="impact-number">3</p>
+        <div class="reveal">
+          <p class="impact-number" data-count="3">3</p>
           <p>Corporate sponsors partnered</p>
         </div>
-        <div>
-          <p class="impact-number">1 200</p>
+        <div class="reveal">
+          <p class="impact-number" data-count="1200">1&nbsp;200</p>
           <p>Community followers</p>
         </div>
-        <div>
-          <p class="impact-number">3</p>
+        <div class="reveal">
+          <p class="impact-number" data-count="3">3</p>
           <p>Communities served</p>
         </div>
       </div>
@@ -64,49 +117,105 @@
   <section class="alt" aria-labelledby="programmes-heading">
     <div class="container">
       <h2 id="programmes-heading">Our programmes</h2>
+      <p class="section-intro">Every programme is free for learners and runs on Saturdays at community venues across Tshwane.</p>
       <div class="grid grid-3">
-        <div class="card">
-          <h3>Coding Bootcamps</h3>
-          <p>Hands-on introductions to web development and programming fundamentals.</p>
-        </div>
-        <div class="card">
-          <h3>Digital Literacy Workshops</h3>
-          <p>Core computer and internet skills for learners with limited prior exposure.</p>
-        </div>
-        <div class="card">
-          <h3>Career Readiness</h3>
-          <p>CV writing, interview practice and guidance into further study or employment.</p>
-        </div>
+        <article class="card card-hover reveal">
+          <h3>Coding bootcamps</h3>
+          <p>Hands-on introductions to web development and Python programming, from your first line of code to a published project.</p>
+          <a href="services.html?type=Coding%20bootcamp">See bootcamp dates</a>
+        </article>
+        <article class="card card-hover reveal">
+          <h3>Digital literacy workshops</h3>
+          <p>Core computer and internet skills for learners with limited prior exposure, in two-day weekend workshops.</p>
+          <a href="services.html?type=Digital%20literacy">See workshop dates</a>
+        </article>
+        <article class="card card-hover reveal">
+          <h3>Career readiness</h3>
+          <p>CV writing, interview practice and guidance on bursaries, learnerships and entry-level tech roles.</p>
+          <a href="services.html?type=Career%20readiness">See career days</a>
+        </article>
       </div>
-      <p><a href="services.html">See all programmes &rarr;</a></p>
     </div>
   </section>
 
   <section aria-labelledby="gallery-heading">
     <div class="container">
-      <h2 id="gallery-heading">From our bootcamps</h2>
-      <div class="grid grid-3">
-        <img class="placeholder-img" role="img" aria-label="Bootcamp session photo placeholder" src="images/bootcam.jpeg" alt="Bootcamp session photo placeholder"/>
-        <img class="placeholder-img" role="img" aria-label="Bootcamp session photo placeholder" src="images/bootcamp.jpeg" alt="Bootcamp session photo placeholder"/>
-        <img class="placeholder-img" role="img" aria-label="Bootcamp session photo placeholder" style="height: 217px;" src="images/bootcamp 1.jpeg" alt="Bootcamp session photo placeholder"/>
-      </div>
+      <h2 id="gallery-heading">Inside our bootcamps</h2>
+      <p class="section-intro">Select a photo to view it larger.</p>
+      <ul class="gallery grid grid-2">
+        <li class="reveal">
+          <figure>
+            <a href="images/youth-learners-collaborating-on-laptops.jpg" data-lightbox data-caption="Learners solving a coding challenge together">
+              <img class="photo" src="images/youth-learners-collaborating-on-laptops.jpg" alt="Three young learners working together on laptops during a coding bootcamp" width="1200" height="750" loading="lazy" decoding="async">
+            </a>
+            <figcaption>Learners solving a coding challenge together</figcaption>
+          </figure>
+        </li>
+        <li class="reveal">
+          <figure>
+            <a href="images/coding-bootcamp-group-session.jpg" data-lightbox data-caption="A Saturday bootcamp group session">
+              <img class="photo" src="images/coding-bootcamp-group-session.jpg" alt="A volunteer instructor presenting to a full room of bootcamp learners" width="700" height="438" loading="lazy" decoding="async">
+            </a>
+            <figcaption>A Saturday bootcamp group session</figcaption>
+          </figure>
+        </li>
+        <li class="reveal">
+          <figure>
+            <a href="images/learner-writing-code-with-mentor.jpg" data-lightbox data-caption="One-on-one support from a volunteer mentor">
+              <img class="photo" src="images/learner-writing-code-with-mentor.jpg" alt="A learner writing code on a laptop while a mentor looks on" width="588" height="288" loading="lazy" decoding="async">
+            </a>
+            <figcaption>One-on-one support from a volunteer mentor</figcaption>
+          </figure>
+        </li>
+        <li class="reveal">
+          <figure>
+            <a href="images/learners-coding-in-computer-lab.jpg" data-lightbox data-caption="Practice time in the computer lab">
+              <img class="photo" src="images/learners-coding-in-computer-lab.jpg" alt="Learners coding at desktop computers in a computer lab" width="588" height="417" loading="lazy" decoding="async">
+            </a>
+            <figcaption>Practice time in the computer lab</figcaption>
+          </figure>
+        </li>
+      </ul>
     </div>
   </section>
 
   <section class="alt" aria-labelledby="cta-heading">
     <div class="container">
       <h2 id="cta-heading">Help us reach more young people</h2>
-      <p>Whether you can volunteer your time or support us financially, every contribution grows our reach.</p>
-      <a href="enquiry.html" class="btn">Volunteer</a>
-      <a href="enquiry.html" class="btn btn-outline" style="color:var(--purple);border-color:var(--purple);">Donate</a>
+      <p>Every R2&nbsp;500 puts one young person through a full 8-week coding bootcamp. Whether you can volunteer your time or support us financially, every contribution grows our reach.</p>
+      <a href="enquiry.html?role=volunteer" class="btn">Volunteer</a>
+      <a href="enquiry.html?role=sponsor" class="btn btn-outline-dark">Sponsor a learner</a>
     </div>
   </section>
 </main>
 
 <footer class="site-footer">
   <div class="container">
-    <p>&copy; 2026 Tshwane Youth Tech Hub, Tshwane, South Africa.</p>
-    <p>Find us on <a href="#">Facebook</a> or visit our <a href="contact.html">Contact page</a>.</p>
+    <div class="footer-grid">
+      <div>
+        <h2>Tshwane Youth Tech Hub</h2>
+        <p>Free coding bootcamps, digital literacy workshops and career readiness for youth aged 16 to 25 in Soshanguve, Atteridgeville and Mamelodi.</p>
+      </div>
+      <nav aria-label="Footer">
+        <h2>Pages</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Programmes</a></li>
+          <li><a href="enquiry.html">Get Involved</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Get in touch</h2>
+        <ul>
+          <li><a href="tel:+27129876543">012&nbsp;987&nbsp;6543</a></li>
+          <li><a href="mailto:info@tshwaneyouthtechhub.org.za">info@tshwaneyouthtechhub.org.za</a></li>
+          <li><a href="https://www.facebook.com/TshwaneYouthTechHub" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; <span data-year>2026</span> Tshwane Youth Tech Hub, Tshwane, South Africa.</p>
   </div>
 </footer>
 

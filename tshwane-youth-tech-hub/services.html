@@ -1,21 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Programmes | Tshwane Youth Tech Hub</title>
-<meta name="description" content="Explore Tshwane Youth Tech Hub's coding bootcamps, digital literacy workshops and career readiness programmes.">
-<link name="stylesheet" rel="stylesheet" href="css/style.css">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org https://unpkg.com; connect-src 'self'; form-action 'self' mailto:; base-uri 'self'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Free Coding Bootcamps &amp; Digital Skills in Tshwane | TYTH</title>
+<meta name="description" content="Browse free coding bootcamps, digital literacy workshops and career days in Soshanguve, Atteridgeville and Mamelodi. Filter by venue and date and apply online.">
+<meta name="keywords" content="free coding bootcamp Tshwane, digital skills training Soshanguve, learn to code Atteridgeville, youth tech programmes Pretoria, digital literacy Mamelodi, volunteer coding tutor Pretoria">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://tshwane-youth-tech-hub.netlify.app/services.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tshwane Youth Tech Hub">
+<meta property="og:title" content="Free Coding Bootcamps &amp; Digital Skills in Tshwane | TYTH">
+<meta property="og:description" content="Browse free coding bootcamps, digital literacy workshops and career days in Soshanguve, Atteridgeville and Mamelodi. Filter by venue and date and apply online.">
+<meta property="og:url" content="https://tshwane-youth-tech-hub.netlify.app/services.html">
+<meta property="og:image" content="https://tshwane-youth-tech-hub.netlify.app/images/youth-learners-collaborating-on-laptops.jpg">
+<meta property="og:locale" content="en_ZA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4A148C">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+<script src="js/main.js" defer></script>
+<script src="js/data.js" defer></script>
+<script src="js/catalogue.js" defer></script>
+</head><body>
+<a class="skip-link" href="#main">Skip to main content</a>
 
 <header class="site-header">
   <div class="container">
     <a href="index.html" class="logo">Tshwane Youth Tech Hub</a>
-    <nav class="main-nav" aria-label="Primary">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="primary-nav" aria-label="Primary">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
@@ -27,56 +50,165 @@
   </div>
 </header>
 
-<main>
+<main id="main">
   <section class="hero">
     <div class="container">
       <h1>Our programmes</h1>
-      <p>All programmes are free for beneficiaries and run in partnership with local venues in Soshanguve and Atteridgeville.</p>
+      <p>All programmes are free for learners aged 16&ndash;25 and run at venues in Soshanguve, Atteridgeville and Mamelodi.</p>
     </div>
   </section>
 
-  <section aria-labelledby="bootcamp-heading">
+  <section aria-labelledby="overview-heading">
     <div class="container">
-      <h2 id="bootcamp-heading">Coding bootcamps</h2>
-      <div class="grid grid-2">
-        <div class="card">
-          <h3>Intro to Web Development</h3>
-          <p>An 8-week introduction to HTML, CSS and JavaScript for learners aged 16&ndash;25. No prior experience required.</p>
-        </div>
-        <div class="card">
-          <h3>Intro to Python</h3>
-          <p>A 6-week programme covering programming fundamentals using Python, for learners who have completed the digital literacy workshop.</p>
-        </div>
+      <h2 id="overview-heading">What we offer</h2>
+      <div class="grid grid-3">
+        <article class="card card-hover reveal">
+          <h3>Coding bootcamps</h3>
+          <p><strong>Intro to Web Development</strong> is an 8-week introduction to HTML, CSS and JavaScript, with no prior experience required.</p>
+          <p><strong>Intro to Python</strong> is a 6-week programme in programming fundamentals for learners who have completed the digital literacy workshop.</p>
+        </article>
+        <article class="card card-hover reveal">
+          <h3>Digital literacy workshops</h3>
+          <p>Weekend workshops covering computer basics, internet safety, email and essential office software, designed for learners with little to no prior computer experience.</p>
+        </article>
+        <article class="card card-hover reveal">
+          <h3>Career readiness</h3>
+          <p>CV writing, interview practice, and guidance on bursaries, learnerships and entry-level tech roles, delivered alongside our bootcamp graduates.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <section class="alt" aria-labelledby="literacy-heading">
+  <section class="alt" aria-labelledby="intakes-heading">
     <div class="container">
-      <h2 id="literacy-heading">Digital literacy workshops</h2>
-      <p>Weekend workshops covering computer basics, internet safety, email and essential office software &mdash; designed for learners with little to no prior computer exposure.</p>
+      <h2 id="intakes-heading">Upcoming intakes</h2>
+      <p class="section-intro">Search for a programme, or filter by type and venue. Past events are hidden automatically.</p>
+
+      <form id="catalogue-form" class="toolbar" role="search" aria-label="Search upcoming intakes">
+        <div class="search-field">
+          <label for="search">Search</label>
+          <input type="search" id="search" name="q" placeholder="e.g. Python, Mamelodi, CV" autocomplete="off">
+        </div>
+        <div>
+          <label for="filter-type">Programme type</label>
+          <select id="filter-type" name="type">
+            <option value="all">All types</option>
+            <option value="Coding bootcamp">Coding bootcamps</option>
+            <option value="Digital literacy">Digital literacy</option>
+            <option value="Career readiness">Career readiness</option>
+          </select>
+        </div>
+        <div>
+          <label for="filter-venue">Venue</label>
+          <select id="filter-venue" name="venue">
+            <option value="all">All venues</option>
+            <option value="Soshanguve">Soshanguve</option>
+            <option value="Atteridgeville">Atteridgeville</option>
+            <option value="Mamelodi">Mamelodi</option>
+          </select>
+        </div>
+        <div>
+          <label for="sort">Sort by</label>
+          <select id="sort" name="sort">
+            <option value="date">Soonest first</option>
+            <option value="seats">Most seats open</option>
+            <option value="name">Name (A to Z)</option>
+          </select>
+        </div>
+        <label class="check-label"><input type="checkbox" id="filter-open" name="open"> Only show intakes with open seats</label>
+        <button type="submit" class="visually-hidden">Apply search and filters</button>
+      </form>
+
+      <p id="results-status" class="results-status" aria-live="polite"></p>
+      <ul id="catalogue" class="catalogue grid grid-3">
+        <li><p>Loading upcoming intakes&hellip;</p></li>
+      </ul>
+      <noscript><p>Turn on JavaScript to see upcoming intake dates, or <a href="contact.html">contact us</a> for the schedule.</p></noscript>
     </div>
   </section>
 
-  <section aria-labelledby="career-heading">
+  <section aria-labelledby="faq-heading">
     <div class="container">
-      <h2 id="career-heading">Career readiness</h2>
-      <p>CV writing, interview practice, and guidance on bursaries, learnerships and entry-level tech roles, delivered alongside our bootcamp graduates.</p>
+      <h2 id="faq-heading">Frequently asked questions</h2>
+<div class="accordion">
+  <div class="accordion-item">
+    <h3><button type="button" class="accordion-trigger" id="faq-q1" aria-expanded="false" aria-controls="faq-a1">Do I have to pay for a programme?</button></h3>
+    <div class="accordion-panel" id="faq-a1" role="region" aria-labelledby="faq-q1" hidden>
+      <p>No. All our programmes are free for learners, thanks to our sponsors and volunteers. We also provide the computers you will use in class.</p>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h3><button type="button" class="accordion-trigger" id="faq-q2" aria-expanded="false" aria-controls="faq-a2">Who can apply?</button></h3>
+    <div class="accordion-panel" id="faq-a2" role="region" aria-labelledby="faq-q2" hidden>
+      <p>Young people aged 16 to 25 who live in or near Tshwane. Learners under 18 need permission from a parent or guardian.</p>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h3><button type="button" class="accordion-trigger" id="faq-q3" aria-expanded="false" aria-controls="faq-a3">Do I need my own laptop?</button></h3>
+    <div class="accordion-panel" id="faq-a3" role="region" aria-labelledby="faq-q3" hidden>
+      <p>No. Our venues have computers for every learner. If you have your own laptop you are welcome to bring it.</p>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h3><button type="button" class="accordion-trigger" id="faq-q4" aria-expanded="false" aria-controls="faq-a4">What if an intake is full?</button></h3>
+    <div class="accordion-panel" id="faq-a4" role="region" aria-labelledby="faq-q4" hidden>
+      <p>You can still apply and we will add you to the waiting list. We call waiting-list learners first when a seat opens or a new intake is announced.</p>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h3><button type="button" class="accordion-trigger" id="faq-q5" aria-expanded="false" aria-controls="faq-a5">Can I do Intro to Python without any experience?</button></h3>
+    <div class="accordion-panel" id="faq-a5" role="region" aria-labelledby="faq-q5" hidden>
+      <p>Intro to Python builds on the Digital Literacy Workshop, so we ask you to complete that workshop first. Intro to Web Development needs no experience at all.</p>
+    </div>
+  </div>
+</div>
     </div>
   </section>
 
   <section class="alt" aria-labelledby="enrol-heading">
     <div class="container">
       <h2 id="enrol-heading">Want to enrol or volunteer as an instructor?</h2>
-      <a href="enquiry.html" class="btn">Get involved</a>
+      <a href="enquiry.html?role=learner" class="btn">Apply as a learner</a>
+      <a href="enquiry.html?role=volunteer" class="btn btn-outline-dark">Volunteer</a>
     </div>
   </section>
 </main>
 
+<dialog class="modal" id="detail-modal" aria-labelledby="detail-title">
+  <div class="modal-header">
+    <h2 id="detail-title">Details</h2>
+    <button type="button" class="modal-close" data-close aria-label="Close">&times;</button>
+  </div>
+  <div class="modal-body"></div>
+</dialog>
+
 <footer class="site-footer">
   <div class="container">
-    <p>&copy; 2026 Tshwane Youth Tech Hub, Tshwane, South Africa.</p>
-    <p>Find us on <a href="#">Facebook</a> or visit our <a href="contact.html">Contact page</a>.</p>
+    <div class="footer-grid">
+      <div>
+        <h2>Tshwane Youth Tech Hub</h2>
+        <p>Free coding bootcamps, digital literacy workshops and career readiness for youth aged 16 to 25 in Soshanguve, Atteridgeville and Mamelodi.</p>
+      </div>
+      <nav aria-label="Footer">
+        <h2>Pages</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Programmes</a></li>
+          <li><a href="enquiry.html">Get Involved</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Get in touch</h2>
+        <ul>
+          <li><a href="tel:+27129876543">012&nbsp;987&nbsp;6543</a></li>
+          <li><a href="mailto:info@tshwaneyouthtechhub.org.za">info@tshwaneyouthtechhub.org.za</a></li>
+          <li><a href="https://www.facebook.com/TshwaneYouthTechHub" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; <span data-year>2026</span> Tshwane Youth Tech Hub, Tshwane, South Africa.</p>
   </div>
 </footer>
 
